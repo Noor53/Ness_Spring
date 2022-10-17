@@ -1,0 +1,105 @@
+
+Setup
+
+STS IDE 
+
+MYSQL Database
+
+POSTMAN
+
+
+JUNIT 
+
+Unit Testing:
+---------------
+
+SDLC :
+
+Unit Testing
+
+Why?
+-----
+
+1.Verify Specification
+2. Check Software Quality
+3. Find bugs / logical errors
+4. Test particular layer/unit
+
+
+JUNIT-5
+
+jupiter
+
+
+
+Annotations in JUNIT5
+
+@Test
+@Before
+@After
+@BeforeEach
+@AfterEach
+@DisplayName
+@Disabled
+
+
+
+junit package
+
+Assertion
+
+assertEquals()
+assertNotEquals()
+assertTrue()
+assertNotNull()
+assertNull()
+
+
+
+
+
+method/function
+class 
+package/module
+
+@Author: Javeed
+
+
+class Calsi{
+	
+	int add(int a, int b){   --> add(4,2)  6,8
+
+		return a+b;
+	
+	}
+
+	int sub(int a, int b){
+
+		return a-b;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+Test cases:
+
+add(int,int)
+
+4,5
+0,0
+0,a
+-,-
+-5,-3
+
+
+
+
+
