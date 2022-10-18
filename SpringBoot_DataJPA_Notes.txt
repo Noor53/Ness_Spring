@@ -1,0 +1,77 @@
+
+
+With out spring boot
+=====================
+Use Maven (install maven)
+Search dependencies
+add them pom.xml
+
+update java version
+xml configuration  application.xml
+
+install web servers like Tomcat
+install database
+
+using views/front end with in java
+
+
+
+Spring Boot:
+-------------
+Does not supports xml configuration
+Configuration inside  properties files or yml file
+
+Does not supports JSP web pages
+REST API as a json data
+
+spring starter will add all dependencies automatic
+
+Embedded Web server --> Tomcat server
+Embedded H2 Database
+
+Spring Boot use Data JPA ---> Hibernate ---> JDBC
+
+
+
+
+Spring Data JPA:
+-----------------
+Interfaces:
+
+1. Repository<T,ID>
+
+2. CrudRepository<T,ID>
+
+3. JpaRepository<T,ID>
+
+
+1. create  Repository interface and extends JpaRepository<EntityClassName,ID_Type>
+
+save(Employee emp)  ---> to add data   // insert into employee values(eid,ename,sal);
+			 to update data // update employee set ename = ? , sal = ? where eid = ?
+
+
+findById(id)  --> select one record based on given id // select * from employee where eid = ?;
+
+deleteById(id) ---> delete one record for given id //  delete from employee where eid = ?;
+
+
+findAll() --->  select all records  // select * from employee;
+
+
+------------------------
+
+how to access h2 database?
+
+Run Spring Boot Application then
+Goto any browser and type
+
+http://localhost:8080/h2-console
+
+H2 Page appears enter url (copy from application.properties file) and connect
+
+H2 Dashboard will be appear.
+
+
+
+
