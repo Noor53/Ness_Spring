@@ -41,7 +41,7 @@ public class UserServiceImp implements IUserServce {
 			Long deptId =  user.getDepartmentId();
 			
 			
-	Department department  =	restTemplate.getForObject("http://localhost:8181/api/department/get/"+deptId, Department.class);	
+	Department department  =	restTemplate.getForObject("http://DEPARTMENT-SERVICE/api/department/get/"+deptId, Department.class);	
 			
 			//Department department = (Department)	response.getBody();
 		
