@@ -1,0 +1,49 @@
+Kafka:
+--------
+
+1.Download kafka from www.kafka.org and extract zip/tar file.
+
+2.copy kafka into C-Drive and rename folder name as Kafka.
+
+3. Goto Kafka/config folder and do change log directory path in 
+  server.properties -> log.dirs=c:/kafka/kafka-logs
+  and zookeeper.properties ->  dataDir=c:/kafka/zookeeper-data
+
+4. Now, we can run zookeeper and kafka servers
+First run zookeeper using following command
+
+C:\kafka>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+Then, Run kafka server using following command
+C:\kafka>.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+5. Create New Topics using below command
+
+c:\kafka>.\bin\windows\kafka-topics.bat --create -zookeeper  localhost:2181 --replication-factor 1 
+ --partitions 1 --topic TestTopic
+
+Once we run above command successfully topic will be created. We can create any number of topics.
+
+6. To list out all existing topics use
+
+c:\kafka>.\bin\windows\kafka-topics.bat  --list -zookeeper  localhost:2181 
+
+7. Now, open new command prompt and run kafka-producer using below command.
+
+C:\kafka>.\bin\windows\kafka-console-producer.bat  --broker-list localhost:9092 --topic TestTopic(topic name)
+
+Now, under another command prompt we can write messages to get produce by kafka-producer
+> Hi friends!
+> How are you?
+
+
+8. Open a new command prompt and run kafka-consumer as follows
+
+C:\kafka>.\bin\windows\kafka-console-consumer.bat  --bootstrap-server localhost:9092 --topic TestTopic --from-beginning
+
+Now, all message from producer will be appear in consumer console.
+ Hi friends!
+ How are you?
+
+
